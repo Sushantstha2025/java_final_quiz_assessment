@@ -6,6 +6,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Dimension;
+import java.awt.Color;
 
 public class UserGUI extends JFrame {
 
@@ -40,6 +41,8 @@ public class UserGUI extends JFrame {
         lblWelcome.setText("Welcome, " + firstName + "!");
 
         JButton logout = new JButton("Logout");
+        logout.setBackground(new Color(255, 0, 0));
+        logout.setForeground(new Color(255, 255, 255));
         logout.setFont(new Font("Times New Roman", Font.BOLD, 14));
         logout.addActionListener(e -> {
             dispose();
@@ -49,11 +52,13 @@ public class UserGUI extends JFrame {
         contentPane.add(logout);
 
         comboBox = new JComboBox<>();
+        comboBox.setForeground(new Color(128, 128, 128));
+        comboBox.setBackground(new Color(255, 128, 64));
         comboBox.setFont(new Font("Times New Roman", Font.BOLD, 14));
         comboBox.setModel(new DefaultComboBoxModel<>(new String[]{
                 "Beginner", "Intermediate", "Advanced"
         }));
-        comboBox.setBounds(565, 247, 90, 29);
+        comboBox.setBounds(555, 247, 111, 29);
         contentPane.add(comboBox);
 
         /** 
@@ -61,6 +66,8 @@ public class UserGUI extends JFrame {
          * selected difficulty level. 
          */
         JButton play = new JButton("PLAY QUIZ");
+        play.setForeground(new Color(255, 255, 255));
+        play.setBackground(new Color(0, 128, 64));
         play.addActionListener(e -> {
             String selectedDifficulty = (String) comboBox.getSelectedItem();
             if (selectedDifficulty == null) {
@@ -81,6 +88,8 @@ public class UserGUI extends JFrame {
          * personal score history from the database. 
          */
         JButton view = new JButton("View Stats");
+        view.setForeground(new Color(255, 255, 255));
+        view.setBackground(new Color(64, 0, 128));
         view.addActionListener(e -> showMyStats());
         view.setFont(new Font("Times New Roman", Font.BOLD, 14));
         view.setBounds(141, 389, 111, 29);
@@ -91,6 +100,8 @@ public class UserGUI extends JFrame {
          * competitors using the CompetitorList logic. 
          */
         JButton leaderboard = new JButton("Leaderboard");
+        leaderboard.setForeground(new Color(128, 128, 128));
+        leaderboard.setBackground(new Color(255, 255, 0));
         leaderboard.addActionListener(e -> {
             CompetitorList list = new CompetitorList();
             String report = list.generateFullReport();

@@ -63,6 +63,8 @@ public class UpdateGUI extends JFrame {
 		 * Disposes the current window and returns to the Admin dashboard.
 		 */
 		JButton btnNewButton = new JButton("Home");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 64, 128));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();

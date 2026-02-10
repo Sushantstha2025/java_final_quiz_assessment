@@ -5,6 +5,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class CompetitionGUI extends JFrame {
 
@@ -55,6 +56,8 @@ public class CompetitionGUI extends JFrame {
 		contentPane.add(lookupButton);
 
 		JButton home = new JButton("Home");
+		home.setForeground(new Color(255, 255, 255));
+		home.setBackground(new Color(0, 0, 160));
 		home.setBounds(602, 35, 84, 20);
 		contentPane.add(home);
 

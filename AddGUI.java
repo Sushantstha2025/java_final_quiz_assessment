@@ -61,6 +61,8 @@ public class AddGUI extends JFrame {
 		contentPane.add(lblAddQuestions);
 		
 		JButton btnNewButton = new JButton("Home");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 0, 160));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -167,7 +169,7 @@ public class AddGUI extends JFrame {
 		    }
 		});
 		btnNewButton_1.setForeground(new Color(255, 255, 255));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
+		btnNewButton_1.setBackground(new Color(0, 128, 64));
 		btnNewButton_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		btnNewButton_1.setBounds(282, 523, 84, 30);
 		contentPane.add(btnNewButton_1);

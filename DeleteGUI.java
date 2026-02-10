@@ -60,6 +60,8 @@ public class DeleteGUI extends JFrame {
 		contentPane.add(lblDeleteQuestion);
 		
 		JButton btnNewButton = new JButton("Home");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 0, 160));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
