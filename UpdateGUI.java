@@ -265,7 +265,7 @@ public class UpdateGUI extends JFrame {
 		                        "No question found with ID: " + id,
 		                        "Not Found", JOptionPane.INFORMATION_MESSAGE);
 
-		                // Clear fields on not found
+		                // Clear fields if not found
 		                textField.setText("");
 		                option_1.setText("");
 		                option_2.setText("");

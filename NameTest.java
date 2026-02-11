@@ -13,7 +13,6 @@
 	    
 	    @BeforeEach
 	    public void setUp() {
-	        // This runs before each test method
 	        name2Parts = new Name("John", "Smith");
 	    }
 	    

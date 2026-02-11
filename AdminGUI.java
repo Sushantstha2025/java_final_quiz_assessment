@@ -139,10 +139,9 @@ public class AdminGUI extends JFrame {
 	        new CompetitionGUI().setVisible(true);
 	    } else if (choice == 1) {
 	        // Console Interactive View
-	        dispose();                // Optional: close AdminGUI when entering console
+	        dispose();                
 	        runInteractiveConsoleStats();
 	    }
-	    // Cancel → do nothing (stay in AdminGUI)
 	}
 	
 	private void runInteractiveConsoleStats() {
@@ -218,7 +217,7 @@ public class AdminGUI extends JFrame {
 
 	    scanner.close();
 
-	    // Optional: re-open login screen after console exit
+	    // Optional: re-open admin gui after console exit
 	    EventQueue.invokeLater(() -> new AdminGUI().setVisible(true));
 	}
 	

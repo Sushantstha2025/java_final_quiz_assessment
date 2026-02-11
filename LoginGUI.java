@@ -17,7 +17,7 @@ public class LoginGUI extends JFrame {
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
     private JTextField txtUsername;
-    private JPasswordField txtPassword;  // Changed to JPasswordField - better!
+    private JPasswordField txtPassword;  
     private DBHandler dbHandler = new DBHandler();
 
     /**

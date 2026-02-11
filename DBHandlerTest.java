@@ -9,9 +9,6 @@ import java.sql.*;
 /**
  * JUnit 5 test class for DBHandler.java
  * Tests database operations including CRUD operations for questions.
- * 
- * NOTE: These tests require a working database connection.
- * Make sure your MySQL server is running before executing these tests.
  */
 public class DBHandlerTest {
     
@@ -62,18 +59,16 @@ public class DBHandlerTest {
             Statement st = conn.createStatement();
             int questionsDeleted = st.executeUpdate(deleteQuestion);
             
-            // Re-enable foreign key checks
+            // Re-enable foreign key 
             Statement enableFK = conn.createStatement();
             enableFK.execute("SET FOREIGN_KEY_CHECKS = 1");
             
-            // Debug output (optional - comment out if too verbose)
             if (usersDeleted > 0 || scoresDeleted > 0 || questionsDeleted > 0) {
                 System.out.println("Cleanup: Deleted " + usersDeleted + " users, " + 
                                  scoresDeleted + " scores, " + questionsDeleted + " questions");
             }
             
         } catch (SQLException e) {
-            // Silent cleanup - don't fail tests if cleanup has issues
             System.err.println("Cleanup warning: " + e.getMessage());
         }
     }
@@ -304,14 +299,12 @@ public class DBHandlerTest {
     }
     
     /**
-     * Manual cleanup test - run this FIRST if other tests are failing due to leftover data
-     * Right-click this method → Run As → JUnit Test
+     * Manual cleanup test 
      */
     @Test
     public void aaa_ManualCleanup_RunThisFirst() {
         cleanUpTestData();
         
-        // Verify cleanup worked
         String role = dbHandler.validateLogin(TEST_USERNAME, TEST_PASSWORD);
         assertNull(role, "Test user should not exist after cleanup");
         
