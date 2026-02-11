@@ -49,7 +49,7 @@ public class SushantCompetitorTest {
         // Remove min (3) and max (5)
         // Average of {5, 4, 4} = 13/3 = 4.3 (rounded to 1 decimal)
         assertEquals(4.3, competitor1.getOverallScore(), 0.01);
-        
+        	
         // For scores {2, 2, 2, 2, 2}
         // Remove one 2 (min) and one 2 (max)
         // Average of {2, 2, 2} = 6/3 = 2.0
